@@ -35,8 +35,6 @@ shooting = False
 shoot_timer = 0
 shoot_cooldown = 0
 
-player = Player(run_frames[0], (400, GROUND_Y - 25))
-
 gun = Actor("gun")
 gun.visible = True
 
@@ -96,6 +94,8 @@ class Player(Actor):
         
         self.max_health = 100 + (self.level - 1) * 50
         self.health = self.max_health
+
+player = Player(run_frames[0], (400, GROUND_Y - 25))
 
 def draw():
     screen.clear()
